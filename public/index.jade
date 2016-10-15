@@ -1,0 +1,30 @@
+doctype
+html
+  title VI/VIM Help | SkilStak Coding Arts
+  meta(name="description" content="vi (vim) help showing common commands that can be printed easily from SkilStak")
+  link(rel="stylesheet" href="base.css")
+  style
+    include:stylus main.styl
+body
+  header
+    h1 #{title}
+  each s in sections
+    div(id="#{s.title}").section
+      table
+        thead: tr: th(colspan=2) #{s.title}
+        tbody
+          each tip in s.tips
+            tr
+              td.k!= tip.k
+              td.d!= tip.d
+  footer
+    .skilstak
+      p: img(src="skilstak-logo-bw.svg")
+      p: a(href="http://skilstak.com") SkilStak Coding Arts
+      p: a(href="http://vi.skilstak.io") vi.skilstak.io
+        
+    p.formats
+      a(href="skilstak-vim-help.pdf") PDF 
+      a(href="skilstak-vim-help.svg") SVG 
+      a(href="json") JSON 
+

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cp harp.json public/json
+
+harp compile
+[ $? -ne 0 ] && exit 1
+
+surge www
+[ $? -ne 0 ] && exit 1
+exit 0

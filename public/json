@@ -1,0 +1,127 @@
+{
+  "globals": {
+    "title": "VI/VIM Help",
+    "url": "http://vi.skilstak.io",
+    "repo": "http://github.com/skilstak/vi-help",
+    "sections": [
+      {
+        "title": "Modes & Files",
+        "tips": [
+          { "k": "vi foo", "d": "Edit file foo" },
+          { "k": "ESC", "d": "Command mode" },
+          { "k": "control-[", "d": "Same as ESC" },
+          { "k": ":w", "d": "Save" },
+          { "k": ":w bar", "d": "Save as bar" },
+          { "k": "ZZ or :x", "d": "Save & Exit" },
+          { "k": ":r foo", "d": "Read & insert file foo" },
+          { "k": "ZQ or :q!", "d": "Exit without save" }
+        ]
+      },
+      {
+        "title": "Insert",
+        "tips": [
+          { "k": "i", "d": "Insert before cursor" },
+          { "k": "I", "d": "Insert before line" },
+          { "k": "a", "d": "Append after cursor" },
+          { "k": "A", "d": "Append after line" },
+          { "k": "o", "d": "Add new line after" },
+          { "k": "O", "d": "Add new line before" },
+          { "k": ":r foo", "d": "Read & insert file foo" },
+          { "k": "p", "d": "Paste after line (after dd, yy)" },
+          { "k": "P", "d": "Paste before line (after dd, yy)" },
+          { "k": "C", "d": "Rewrite to end of line" }
+        ]
+      },
+      {
+        "title": "Move",
+        "tips": [
+          { "k": "h or &larr;", "d": "Cursor left" },
+          { "k": "j or &darr;", "d": "Cursor down" },
+          { "k": "k or &uarr;", "d": "Cursor up" },
+          { "k": "l or &rarr;", "d": "Cursor right" },
+          { "k": "w", "d": "Next word" },
+          { "k": "W", "d": "Next spaced word" },
+          { "k": "b", "d": "Start of word" },
+          { "k": "B", "d": "Start of spaced word" },
+          { "k": "e", "d": "End of word" },
+          { "k": "E", "d": "End of spaced word" },
+          { "k": "(", "d": "Previous sentence" },
+          { "k": ")", "d": "Next sentence" },
+          { "k": "}", "d": "Previous paragraph" },
+          { "k": "{", "d": "Next paragraph" },
+          { "k": "0", "d": "Beginning of line" },
+          { "k": "&dollar;", "d": "End of line" },
+          { "k": "1G or gg", "d": "Start of file" },
+          { "k": "G", "d": "End of file" },
+          { "k": ":5 or 5G", "d": "Line 5 of file" },
+          { "k": "fp", "d": "Next 'p' in line" },
+          { "k": "Fp", "d": "Back to 'p' in line" },
+          { "k": "tp", "d": "Next before 'p' in line" },
+          { "k": "Tp", "d": "Back to after 'p' in line" },
+          { "k": "H", "d": "Top of screen" },
+          { "k": "M", "d": "Middle of screen" },
+          { "k": "L", "d": "Bottom of screen" },
+          { "k": "%", "d": "Matching bracket" }
+        ]
+      },
+      {
+        "title": "Delete",
+        "tips": [
+          { "k": "x", "d": "Delete current (right) character" },
+          { "k": "X", "d": "Delete previous (left) character" },
+          { "k": "D", "d": "Delete rest of line" },
+          { "k": "dd or :d", "d": "Delete (cut) current line" },
+          { "k": "2dd", "d": "Delete next two lines" },
+          { "k": "dw", "d": "Delete next word" },
+          { "k": "2dw", "d": "Delete next two words" },
+          { "k": ":4,10d", "d": "Delete lines 4 to 10" },
+          { "k": "dG", "d": "Delete rest of file" }
+        ]
+      },
+      {
+        "title": "Find",
+        "tips": [
+          { "k": "/foo", "d": "Find next foo" },
+          { "k": "?foo", "d": "Find last foo" },
+          { "k": "n", "d": "Find next" },
+          { "k": "N", "d": "Find last" },
+          { "k": "*", "d": "Find next of this word" },
+          { "k": "#", "d": "Find last of this word" },
+          { "k": "/lkajdf", "d": "Gibberish to clear find hilight" }
+        ]
+      },
+      {
+        "title": "Replace",
+        "tips": [
+          { "k": "r", "d": "Replace one character" },
+          { "k": "R", "d": "Replace characters" },
+          { "k": ":s/foo/bar", "d": "Replace foo with bar" },
+          { "k": ":s/foo/bar/g", "d": "Replace every bar" },
+          { "k": ":s/foo/bar/c", "d": "Confirm replaces" },
+          { "k": ":1,$s/foo/bar/gc", "d": "Replace all with confirm" }
+        ]
+      },
+      {
+        "title": "Other",
+        "tips": [
+          { "k": ".", "d": "Repeat last one time" },
+          { "k": "2.", "d": "Repeat last two times" },
+          { "k": "u", "d": "Undo last change" },
+          { "k": "yy", "d": "Copy (yank) line" },
+          { "k": "J", "d": "Join lines" },
+          { "k": ">>", "d": "Indent current line" },
+          { "k": "5>>", "d": "Indent next 5 lines" },
+          { "k": "<<", "d": "Unindent current line" },
+          { "k": "5<<", "d": "Unindent next 5 line" },
+          { "k": ">}", "d": "Indent paragraph" },
+          { "k": "<}", "d": "Unindent paragraph" },
+          { "k": ":set [no]nu", "d": "Line numbers" },
+          { "k": ":set [no]list", "d": "Show tabs and returns" },
+          { "k": ":set [no]spell", "d": "Spelling" },
+          { "k": ":set paste", "d": "Get ready to mouse paste" },
+          { "k": ":set [no]ai", "d": "Auto indent" }
+        ]
+      }
+    ]
+  }
+}

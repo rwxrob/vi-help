@@ -1,0 +1,88 @@
+<!DOCTYPE html><html><title>VI/VIM Help | SkilStak Coding Arts</title><meta name="description" content="vi (vim) help showing common commands that can be printed easily from SkilStak"><link rel="stylesheet" href="base.css"><style>body {
+  font-family: proxima-nova, 'Helvetica Neue', Helvetica Arial, sans-serif;
+  text-align: center;
+}
+th,
+h1,
+td {
+  text-align: left;
+  vertical-align: top;
+}
+th,
+h1 {
+  background: #d3d3d3;
+  padding: 0.5em;
+  text-align: center;
+}
+header h1 {
+  text-align: center;
+}
+table {
+  display: inline-block;
+  vertical-align: top;
+  margin: 1em;
+  white-space: nowrap;
+}
+td {
+  padding: 0.5em;
+  vertical-align: top;
+  border: 0;
+}
+td.k {
+  font-family: Consolas, Menlo, Monaco, mono;
+  font-weight: bold;
+}
+.skilstak img {
+  width: 25%;
+}
+@page {
+  size: landscape;
+}
+@media print {
+  body {
+    font-size: 6pt;
+  }
+  table {
+    display: inline-block;
+  }
+  .section th {
+    border: 1px solid #000;
+  }
+  header {
+    display: none;
+  }
+  div[id="Modes\ &\ Files"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  #Insert {
+    position: absolute;
+    left: 0;
+    top: 130pt;
+  }
+  #Delete {
+    position: absolute;
+    left: 0;
+    top: 290pt;
+  }
+  #Move {
+    position: absolute;
+    left: 140pt;
+    top: 1pt;
+  }
+  footer {
+    position: absolute;
+    left: 140pt;
+    top: 400pt;
+  }
+  footer .formats {
+    display: none;
+  }
+}
+@media only screen and (max-width: 70em) {
+  body {
+    font-size: 33pt;
+  }
+}
+</style></html><body><header><h1>VI/VIM Help</h1></header><div id="Modes &amp; Files" class="section"><table><thead><tr><th colspan="2">Modes &amp; Files</th></tr></thead><tbody><tr><td class="k">vi foo</td><td class="d">Edit file foo</td></tr><tr><td class="k">ESC</td><td class="d">Command mode</td></tr><tr><td class="k">control-[</td><td class="d">Same as ESC</td></tr><tr><td class="k">:w</td><td class="d">Save</td></tr><tr><td class="k">:w bar</td><td class="d">Save as bar</td></tr><tr><td class="k">ZZ or :x</td><td class="d">Save & Exit</td></tr><tr><td class="k">:r foo</td><td class="d">Read & insert file foo</td></tr><tr><td class="k">ZQ or :q!</td><td class="d">Exit without save</td></tr></tbody></table></div><div id="Insert" class="section"><table><thead><tr><th colspan="2">Insert</th></tr></thead><tbody><tr><td class="k">i</td><td class="d">Insert before cursor</td></tr><tr><td class="k">I</td><td class="d">Insert before line</td></tr><tr><td class="k">a</td><td class="d">Append after cursor</td></tr><tr><td class="k">A</td><td class="d">Append after line</td></tr><tr><td class="k">o</td><td class="d">Add new line after</td></tr><tr><td class="k">O</td><td class="d">Add new line before</td></tr><tr><td class="k">:r foo</td><td class="d">Read & insert file foo</td></tr><tr><td class="k">p</td><td class="d">Paste after line (after dd, yy)</td></tr><tr><td class="k">P</td><td class="d">Paste before line (after dd, yy)</td></tr><tr><td class="k">C</td><td class="d">Rewrite to end of line</td></tr></tbody></table></div><div id="Move" class="section"><table><thead><tr><th colspan="2">Move</th></tr></thead><tbody><tr><td class="k">h or &larr;</td><td class="d">Cursor left</td></tr><tr><td class="k">j or &darr;</td><td class="d">Cursor down</td></tr><tr><td class="k">k or &uarr;</td><td class="d">Cursor up</td></tr><tr><td class="k">l or &rarr;</td><td class="d">Cursor right</td></tr><tr><td class="k">w</td><td class="d">Next word</td></tr><tr><td class="k">W</td><td class="d">Next spaced word</td></tr><tr><td class="k">b</td><td class="d">Start of word</td></tr><tr><td class="k">B</td><td class="d">Start of spaced word</td></tr><tr><td class="k">e</td><td class="d">End of word</td></tr><tr><td class="k">E</td><td class="d">End of spaced word</td></tr><tr><td class="k">(</td><td class="d">Previous sentence</td></tr><tr><td class="k">)</td><td class="d">Next sentence</td></tr><tr><td class="k">}</td><td class="d">Previous paragraph</td></tr><tr><td class="k">{</td><td class="d">Next paragraph</td></tr><tr><td class="k">0</td><td class="d">Beginning of line</td></tr><tr><td class="k">&dollar;</td><td class="d">End of line</td></tr><tr><td class="k">1G or gg</td><td class="d">Start of file</td></tr><tr><td class="k">G</td><td class="d">End of file</td></tr><tr><td class="k">:5 or 5G</td><td class="d">Line 5 of file</td></tr><tr><td class="k">fp</td><td class="d">Next 'p' in line</td></tr><tr><td class="k">Fp</td><td class="d">Back to 'p' in line</td></tr><tr><td class="k">tp</td><td class="d">Next before 'p' in line</td></tr><tr><td class="k">Tp</td><td class="d">Back to after 'p' in line</td></tr><tr><td class="k">H</td><td class="d">Top of screen</td></tr><tr><td class="k">M</td><td class="d">Middle of screen</td></tr><tr><td class="k">L</td><td class="d">Bottom of screen</td></tr><tr><td class="k">%</td><td class="d">Matching bracket</td></tr></tbody></table></div><div id="Delete" class="section"><table><thead><tr><th colspan="2">Delete</th></tr></thead><tbody><tr><td class="k">x</td><td class="d">Delete current (right) character</td></tr><tr><td class="k">X</td><td class="d">Delete previous (left) character</td></tr><tr><td class="k">D</td><td class="d">Delete rest of line</td></tr><tr><td class="k">dd or :d</td><td class="d">Delete (cut) current line</td></tr><tr><td class="k">2dd</td><td class="d">Delete next two lines</td></tr><tr><td class="k">dw</td><td class="d">Delete next word</td></tr><tr><td class="k">2dw</td><td class="d">Delete next two words</td></tr><tr><td class="k">:4,10d</td><td class="d">Delete lines 4 to 10</td></tr><tr><td class="k">dG</td><td class="d">Delete rest of file</td></tr></tbody></table></div><div id="Find" class="section"><table><thead><tr><th colspan="2">Find</th></tr></thead><tbody><tr><td class="k">/foo</td><td class="d">Find next foo</td></tr><tr><td class="k">?foo</td><td class="d">Find last foo</td></tr><tr><td class="k">n</td><td class="d">Find next</td></tr><tr><td class="k">N</td><td class="d">Find last</td></tr><tr><td class="k">*</td><td class="d">Find next of this word</td></tr><tr><td class="k">#</td><td class="d">Find last of this word</td></tr><tr><td class="k">/lkajdf</td><td class="d">Gibberish to clear find hilight</td></tr></tbody></table></div><div id="Replace" class="section"><table><thead><tr><th colspan="2">Replace</th></tr></thead><tbody><tr><td class="k">r</td><td class="d">Replace one character</td></tr><tr><td class="k">R</td><td class="d">Replace characters</td></tr><tr><td class="k">:s/foo/bar</td><td class="d">Replace foo with bar</td></tr><tr><td class="k">:s/foo/bar/g</td><td class="d">Replace every bar</td></tr><tr><td class="k">:s/foo/bar/c</td><td class="d">Confirm replaces</td></tr><tr><td class="k">:1,$s/foo/bar/gc</td><td class="d">Replace all with confirm</td></tr></tbody></table></div><div id="Other" class="section"><table><thead><tr><th colspan="2">Other</th></tr></thead><tbody><tr><td class="k">.</td><td class="d">Repeat last one time</td></tr><tr><td class="k">2.</td><td class="d">Repeat last two times</td></tr><tr><td class="k">u</td><td class="d">Undo last change</td></tr><tr><td class="k">yy</td><td class="d">Copy (yank) line</td></tr><tr><td class="k">J</td><td class="d">Join lines</td></tr><tr><td class="k">>></td><td class="d">Indent current line</td></tr><tr><td class="k">5>></td><td class="d">Indent next 5 lines</td></tr><tr><td class="k"><<</td><td class="d">Unindent current line</td></tr><tr><td class="k">5<<</td><td class="d">Unindent next 5 line</td></tr><tr><td class="k">>}</td><td class="d">Indent paragraph</td></tr><tr><td class="k"><}</td><td class="d">Unindent paragraph</td></tr><tr><td class="k">:set [no]nu</td><td class="d">Line numbers</td></tr><tr><td class="k">:set [no]list</td><td class="d">Show tabs and returns</td></tr><tr><td class="k">:set [no]spell</td><td class="d">Spelling</td></tr><tr><td class="k">:set paste</td><td class="d">Get ready to mouse paste</td></tr><tr><td class="k">:set [no]ai</td><td class="d">Auto indent</td></tr></tbody></table></div><footer><div class="skilstak"><p><img src="skilstak-logo-bw.svg"></p><p><a href="http://skilstak.com">SkilStak Coding Arts</a></p><p><a href="http://vi.skilstak.io">vi.skilstak.io</a></p></div><p class="formats"><a href="skilstak-vim-help.pdf">PDF </a><a href="skilstak-vim-help.svg">SVG </a><a href="json">JSON </a></p></footer></body>
